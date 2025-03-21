@@ -6,7 +6,7 @@
 /*   By: rabatist <rabatist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:30:26 by rabatist          #+#    #+#             */
-/*   Updated: 2024/12/09 15:00:30 by rabatist         ###   ########.fr       */
+/*   Updated: 2025/03/21 17:32:52 by rabatist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	set_tab(char **tab, char const *s, char c)
 	tab[i] = NULL;
 }
 
-static int	count_words(const char *s, char c)
+int	ft_count_words(const char *s, char c)
 {
 	size_t	i;
 	size_t	words;
@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	char	**tab;
 
-	words = count_words(s, c);
+	words = ft_count_words(s, c);
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
